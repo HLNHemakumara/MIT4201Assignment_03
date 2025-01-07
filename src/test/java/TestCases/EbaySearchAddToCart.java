@@ -7,7 +7,6 @@ import Pages.SearchResultsPage;
 import Utils.ExcelHandler;
 import Utils.TakeErrorScreenShots;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -45,7 +44,7 @@ public class EbaySearchAddToCart extends BaseTest {
 
         // Step 2: Select the first product
         double actualValue = searchResultsPage.assertPrice();
-        double expectedPrice = 450;
+        double expectedPrice = 1000;
         test = extent.createTest("Now Price is comparing", "Now Price is comparing");
 
         try {

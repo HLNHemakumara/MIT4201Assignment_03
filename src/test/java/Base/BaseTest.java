@@ -31,10 +31,7 @@ public class BaseTest {
         extent.attachReporter(sparkReporter);
     }
 
-    /**
-     * Set a custom name for the Extent Report.
-     * @param customName The custom name for the report.
-     */
+
     public void setReportName(String customName) {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         reportFileName = customName + "_" + timestamp + ".html";
@@ -45,11 +42,6 @@ public class BaseTest {
         extent.attachReporter(sparkReporter);
     }
 
-    /**
-     * Start a test in Extent Report with a given name.
-     *
-     * @param testName Name of the test case.
-     */
     public void startTest(String testName) {
         test = extent.createTest(testName);
     }
