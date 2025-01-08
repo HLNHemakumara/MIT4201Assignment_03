@@ -17,7 +17,7 @@ public class EbaySearchAddtoWatchlist extends BaseTest {
     }
 
     @Test
-    public void searchAndBuyApplePhone() {
+    public void searchAndBuySprungMattress() {
 
         HomePage homePage = new HomePage(driver);
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
@@ -31,11 +31,11 @@ public class EbaySearchAddtoWatchlist extends BaseTest {
         ExcelHandler excel = new ExcelHandler(excelFilePath, sheetName);
 
         // Read data
-        String mobileBrand = excel.getCellData(1, 1); // Row 1, Column 1
+        String mattesBrand = excel.getCellData(1, 1); // Row 1, Column 1
 
         // Step 1: Search for Samsung phone
-        homePage.searchFor(mobileBrand);
-        setReportName("Add To Watch list Scenario- Test Case 2");
+        homePage.searchFor(mattesBrand);
+        setReportName("Test Case 2");
         startTest("Add To Watch list Scenario- Test Case 2");
         test = extent.createTest("Successful Searched", "System Successfully searched the item and get the result");
         String screenshotPath1 = TakeErrorScreenShots.takeScreenshot(driver, "SuccessfulSearch");

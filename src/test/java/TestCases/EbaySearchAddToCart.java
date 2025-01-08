@@ -18,7 +18,7 @@ public class EbaySearchAddToCart extends BaseTest {
     }
 
     @Test
-    public void searchAndBuyApplePhone() {
+    public void searchAndBuySprungMattress() {
 
         HomePage homePage = new HomePage(driver);
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
@@ -32,11 +32,11 @@ public class EbaySearchAddToCart extends BaseTest {
         ExcelHandler excel = new ExcelHandler(excelFilePath, sheetName);
 
         // Read data
-        String mobileBrand = excel.getCellData(1, 1); // Row 1, Column 1
+        String mattesBrand = excel.getCellData(1, 1); // Row 1, Column 1
 
         // Step 1: Search for phone
-        homePage.searchFor(mobileBrand);
-        setReportName("Add To Cart Scenario- Test Case 1");
+        homePage.searchFor(mattesBrand);
+        setReportName("Test Case 1");
         startTest("Add To Cart Scenario- Test Case 1");
         test = extent.createTest("Successful Searched", "System Successfully searched the item and get the result");
         String screenshotPath1 = TakeErrorScreenShots.takeScreenshot(driver, "SuccessfulSearch");
@@ -44,7 +44,7 @@ public class EbaySearchAddToCart extends BaseTest {
 
         // Step 2: Select the first product
         double actualValue = searchResultsPage.assertPrice();
-        double expectedPrice = 1000;
+        double expectedPrice = 300;
         test = extent.createTest("Now Price is comparing", "Now Price is comparing");
 
         try {

@@ -12,10 +12,10 @@ public class SearchResultsPage {
     WebDriver driver;
 
     // Locator for the first product in the search results
-    @FindBy(xpath = "//*[@id=\"item5a2ca43833\"]/div/div[2]/a")
+    @FindBy(xpath = "//*[@id=\"item28d95e1e62\"]/div/div[2]/a/div/span")
     WebElement firstProduct;
 
-    @FindBy(xpath = "//*[@id=\"item5a2ca43833\"]/div/div[2]/div[5]/div[1]/div[1]")
+    @FindBy(xpath = "//*[@id=\"item28d95e1e62\"]/div/div[2]/div[3]/div[1]/div[1]/span")
     WebElement itemPrice;
 
     // Constructor to initialize elements

@@ -17,7 +17,7 @@ public class EbaySearchTestBuyItNow extends BaseTest {
     }
 
     @Test
-    public void searchAndBuyApplePhone() {
+    public void searchAndBuySprungMattress() {
         HomePage homePage = new HomePage(driver);
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
         ProductPage productPage = new ProductPage(driver);
@@ -30,11 +30,11 @@ public class EbaySearchTestBuyItNow extends BaseTest {
         ExcelHandler excel = new ExcelHandler(excelFilePath, sheetName);
 
         // Read data
-        String mobileBrand = excel.getCellData(1, 1); // Row 1, Column 1
+        String mattesBrand = excel.getCellData(1, 1); // Row 1, Column 1
 
         // Step 1: Search for Samsung phone
-        homePage.searchFor(mobileBrand);
-        setReportName("Buy It Now Scenario- Test Case 3");
+        homePage.searchFor(mattesBrand);
+        setReportName("Test Case 3");
         startTest("Buy It Now Scenario- Test Case 3");
         test = extent.createTest("Successful Searched", "System Successfully searched the item and get the result");
         String screenshotPath1 = TakeErrorScreenShots.takeScreenshot(driver, "SuccessfulSearch");
